@@ -10,6 +10,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: 'Barlow';
+    border-bottom: #000 2px solid;
 }
 
 .header .logo {
@@ -271,10 +272,16 @@ a {
     width: 100%;
 }
 .simulacao .formulario{
-    width: 55%;
+    width: 65%;
     position: relative;
     height: 500px;
+    margin-left: 0px;
+    border-end-end-radius: 35%;
+    border-top-right-radius: 35%;
     background-color: #fff;
+}
+.simulacao .container{
+    margin-left: 0px;
 }
 .simulacao{
     background-color: #B4FF5C;
