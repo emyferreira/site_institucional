@@ -276,8 +276,8 @@ a {
     position: relative;
     height: 500px;
     margin-left: 0px;
-    border-end-end-radius: 35%;
-    border-top-right-radius: 35%;
+    border-end-end-radius: 40%;
+    border-top-right-radius: 40%;
     background-color: #fff;
 }
 .simulacao .container{
