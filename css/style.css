@@ -1,3 +1,6 @@
+*{
+    font-family: 'Barlow';
+}
 body {
     margin: 0;
 }
@@ -284,5 +287,49 @@ a {
     margin-left: 0px;
 }
 .simulacao{
+    margin-bottom: 5%;
     background-color: #B4FF5C;
+}
+
+/*CONTATO - FALE CONOSCO*/
+.contact h1{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #05FF00;
+}
+.formContact{
+    width: 40%;
+    background-color: #B4FF5C;
+    padding: 5%;
+    height: fit-content;
+    border-radius: 20px;
+}
+.formContact input{
+    width: 250px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 3px;
+}
+.contact img{
+    margin-right: 15%;
+}
+.formContact #ddd{
+    width: 60px;
+}
+
+.formContact #telefone{
+    width: 208px;
+}
+.formContact #assunto{
+    width: 250px;
+    height: 100px;
+}
+.formContact #enviar{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #E6005A;
+    border: 0px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 2px 2px #000;
 }
