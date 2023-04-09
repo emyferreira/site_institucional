@@ -298,14 +298,16 @@ a {
     text-decoration-color: #05FF00;
 }
 .formContact{
-    width: 40%;
+    width: fit-content;
     background-color: #B4FF5C;
     padding: 5%;
     height: fit-content;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .formContact input{
-    width: 250px;
+    width: 280px;
     border: 0px;
     border-radius: 5px;
     padding: 3px;
@@ -315,13 +317,18 @@ a {
 }
 .formContact #ddd{
     width: 60px;
+    margin-right: 2%;
+}
+.formContact #cel{
+    display: flex;
+    flex-direction: row;
 }
 
 .formContact #telefone{
-    width: 208px;
+    width: 180px;
 }
 .formContact #assunto{
-    width: 250px;
+    width: 280px;
     height: 100px;
 }
 .formContact #enviar{
@@ -330,6 +337,42 @@ a {
     background-color: #E6005A;
     border: 0px;
     color: #fff;
+    margin: auto;
     text-align: center;
     box-shadow: 2px 2px #000;
+}
+
+.footer{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer p{
+    margin: 2%;
+}
+.footer span{
+    padding: 10px;
+    height: fit-content;
+    margin: 2%; 
+    background-color: #05FF00;
+    border-radius: 20px;
+}
+.footer #direitos{
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.footer button{
+    margin-top: 2%;
+    width: 100px;
+    height: 50px;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 20px;
 }

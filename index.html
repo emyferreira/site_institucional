@@ -142,18 +142,74 @@
             
             <img src="img/Screenshot_1 2.png" alt="">
             <div class="formContact">
-                Nome: <input type="text" placeholder="Nome Completo">
-                <br><br>
-                E-mail: <input type="text" placeholder="E-mail">
-                <br><br>
-                Cel: <input id="ddd" type="text" placeholder="DDD"> <input id="telefone" type="text" placeholder="Telefone">
-                <br><br>
+                Nome: <input type="text" placeholder="Nome Completo" id="ipt_nome">
+                <br>
+                E-mail: <input type="text" placeholder="E-mail" id="ipt_email">
+                <br>
+                <div id="cel"> Cel: <input id="ddd" type="text" placeholder="DDD"> <input id="telefone" type="text" placeholder="Telefone">
+                </div>
+                <br>
                 Assunto: <input type="text" placeholder="Assunto" id="assunto">
-                <br><br>
-                <button id="enviar">Enviar Solicitação</button>
+                <br>
+                <button onclick="enviar()" id="enviar">Enviar Solicitação</button>
             </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <img src="img/Screenshot_6-removebg-preview 1.png" alt="">
+        <p>coaa.contato@email.com
+            <br>
+            +55 11 99999-0000
+        </p>
+        <span class="footerCard">Termos e condições</span>
+        <span class="footerCard">Privacidade</span>
+        <span class="footerCard">Trabalhe conosco</span>
+        <div id="direitos">Todos os elementos que compõem este site, incluindo, mas não se limitando, as suas marcas, sinais de propaganda, textos, fotos e outras imagens, são propriedade e objeto de direitos exclusivos de seus respectivos titulares e/ou licenciados. A reprodução destes elementos sem prévia autorização dos respectivos proprietários e/ou licenciados constitui ou pode vir a constituir violação de propriedade intelectual, sujeitando os infratores às penalidades cabíveis na legislação civil e penal. Caso tenha interesse em utilizar algum dos elementos contidos neste site, entre em contato com o C.O.A.A.
+
+        <button>Ínicio ^</button>
+    </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    function enviar(){
+        var contact_nome = ipt_nome.value;
+        var contact_email = ipt_email.value;
+        var contact_ddd = ddd.value;
+        var contact_telefone = telefone.value;
+        var contact_assunto = assunto.value;
+
+        var verif_nome = contact_nome != '';
+        var verif_email = contact_email != '' && (contact_email.indexOf('@') >= 0) && contact_email.endsWith('.com');
+        var verif_assunto = contact_assunto != '';
+        var verif_ddd = contact_ddd != '';
+        var verif_telefone = contact_telefone != '';
+        if(!(verif_nome)){
+            document.getElementById("ipt_nome").style.border = "1px solid red";
+            alert("Preencha o campo nome!");
+        }
+        if (!(verif_email)){
+            document.getElementById("ipt_email").style.border = "1px solid red";
+            alert("Informe o email corretamente!");
+        }
+        if(!(verif_ddd && verif_telefone)){
+            document.getElementById("ddd").style.border = "1px solid red";
+            document.getElementById("telefone").style.border = "1px solid red";
+            alert("Informe corretamente o número de telefone");
+        }
+        if(!(verif_assunto)){
+            document.getElementById("assunto").style.border = "1px solid red";
+            alert("O campo assunto não pode estar vazio");
+        }
+        if(verif_nome && verif_email && verif_ddd && verif_telefone && verif_assunto){
+            document.getElementById("ipt_nome").style.border = "none";
+            document.getElementById("ipt_email").style.border = "none";
+            document.getElementById("ddd").style.border = "none";
+            document.getElementById("telefone").style.border = "none";
+            document.getElementById("assunto").style.border = "none";
+        }
+    }
+</script>
