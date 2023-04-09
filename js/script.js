@@ -2,7 +2,6 @@ function validarLogin() {
     // Variaveis
     var email = ipt_email.value;
     var senha = ipt_senha.value;
-    var i = 0; // Contador
 
     // Verificações
     var verif_email = email != "" && (email.endsWith('.com') || email.endsWith('.br'));
