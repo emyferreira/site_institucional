@@ -189,7 +189,7 @@ function criptografar(){
     }
 }
 
-function Calcular() {
+function calcular() {
     var salario = ipt_salario.value;
     var atraso = ipt_atraso.value;
 
